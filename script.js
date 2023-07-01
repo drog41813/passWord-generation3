@@ -36,8 +36,7 @@ function generatePassword() {
 
   // take all true arrays and concat into new array - loop 
   // choose random chars from arr based on user input
-  // var push into new array
-  // var pass word = turn array into string. toString()
+  
   var passwordChar = [];
 
   if(LowerCase){
@@ -53,15 +52,17 @@ function generatePassword() {
     passwordChar = passwordChar.concat(special);
   }
 
+  // var push into new array
+  // var pass word = turn array into string. toString()
   var password = ""; 
   for(var i = 0; i < length; i++) {
     var random = Math.floor(Math.random()* passwordChar.length);
     password += passwordChar[random];
   }
 
+  // return password
   return password;
 
 
 };
-// return password
 generatePassword();
